@@ -1,0 +1,215 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --white-color:hsl(0, 0%, 98%);
+    --gray-color:hsl(0, 0%, 41%);
+    --black-color:hsl(0, 0%, 8%);
+}
+body{
+    font-family: 'Epilogue', sans-serif;
+}
+.container{
+    max-width: 1068px;
+    margin: auto;
+    width: 100%;
+}
+.heading{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+    background-color: var(--white-color);
+    box-shadow: 0 1px 4px hsl(0 4% 15% /10);
+    z-index: 1;
+}
+.heading .nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+.heading .nav .logo{
+    text-decoration: none;
+    color: var(--black-color);
+    font-size: 22px;
+    font-weight: 600;
+}
+.heading .nav .btn{
+    font-size: 25px;
+    color: #3F0071;
+    cursor: pointer;
+}
+.land{
+    padding: 4rem 0 3rem;
+    margin-top: 2rem;
+}
+.land .title{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+img{
+    width: 100%;
+}
+.land .content-box{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    gap: 1.4rem;
+}
+.content-box .prodect-box{
+    position: relative;
+    transition: 0.4s;
+}
+.content-box .prodect-box:hover{
+    padding: 10px;
+    border: 1px solid var(--black-color);
+}
+.prodect-box .prodect-img{
+    width: 100%;
+    height: auto;
+    margin-bottom: 0.5rem ;
+}
+.prodect-box .prodect-title{
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+.prodect-box .add-card{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: var(--black-color);
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.prodect-box .add-card:hover{
+    background-color: hsl(249,32%,17%);
+}
+
+.card{
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 320px;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: var(--white-color);
+    box-shadow: -2px 0 4px hsl(0 4% 15% /10%);
+    transition: 0.5s;
+}
+.card.active{
+    right: 0;
+}
+.card .card-title{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 2rem;
+}
+.card-box{
+    display: grid;
+    grid-template-columns: 32% 50% 18%;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    border-bottom: 1px solid;
+}
+.card-img{
+    width: 100%;
+    height: 100px;
+    object-fit: contain;
+    padding: 10px;
+}
+.card-info{
+    display: grid;
+    row-gap: 0.5rem;
+}
+.card-prodect-title{
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+.card-price{
+    font-weight: 500;
+}
+.card-quantity{
+    border: 1px solid var(--black-color);
+    width: 2.4rem;
+    text-align: center;
+    font-size: 1rem;
+}
+.card-remove{
+    font-size: 1.5rem;
+    color: red;
+    cursor: pointer;
+}
+
+.btn-buy{
+    display: flex;
+    margin: 1.5rem auto 0 auto;
+    padding: 12px 20px;
+    border: none;
+    background-color: red;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.btn-buy:hover{
+    background-color: var(--black-color);
+}
+#close-card{
+    position: absolute;
+    top: 1rem;
+    right: 0.8rem;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+
+@media (max-width:1080px) {
+    .nav{
+        padding: 15px;
+    }
+    .container{
+        margin: 0 auto;
+        width: 90%;
+    }
+    .land{
+        margin-top: 2rem !important;
+    }
+}
+@media (max-width:400px) {
+    .nav{
+        padding: 11px;
+    }
+    .logo{
+        font-size: 1rem;
+    }
+    .card{
+        width: 320px;
+    }
+}
+.cheack{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: var(--black-color);
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.cheack:hover{
+    background-color: hsl(249,32%,17%);
+}
+
+
+.dispalsh{
+    display: none;
+}
